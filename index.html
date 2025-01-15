@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mr Builder - Your Trusted Real Estate Partner">
+  <title>Mr Builder Real Estate</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/properties.css">
+  <link rel="stylesheet" href="styles/gallery.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <svg width="50" height="50" viewBox="0 0 50 50">
+        <path d="M25 2L2 20h6v28h34V20h6L25 2z" fill="#2c3e50"/>
+        <text x="15" y="38" fill="white" font-size="12">MB</text>
+      </svg>
+      <span>Mr Builder</span>
+    </div>
+    <div class="nav-links">
+      <a href="#properties">Properties</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="mobile-menu">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find Your Dream Property</h1>
+      <p>Discover exceptional properties with Mr Builder</p>
+      <div class="search-box">
+        <input type="text" placeholder="Location">
+        <select>
+          <option>Property Type</option>
+          <option>House</option>
+          <option>Apartment</option>
+          <option>Commercial</option>
+        </select>
+        <select>
+          <option>Price Range</option>
+          <option>$100k - $200k</option>
+          <option>$200k - $500k</option>
+          <option>$500k+</option>
+        </select>
+        <button>Search</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="featured-properties" class="properties">
+    <h2>Featured Properties</h2>
+    <div class="property-grid" id="propertyGrid"></div>
+  </section>
+
+  <section class="gallery">
+    <h2>Property Gallery</h2>
+    <div class="gallery-grid"></div>
+  </section>
+
+  <!-- Modal for gallery images -->
+  <div class="modal">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <div class="modal-nav modal-prev" onclick="prevImage()">❮</div>
+    <div class="modal-content">
+      <img src="" alt="">
+    </div>
+    <div class="modal-nav modal-next" onclick="nextImage()">❯</div>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About Mr Builder</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>With over 20 years of experience in real estate, Mr Builder has established itself as a trusted name in property solutions. Our commitment to excellence and customer satisfaction sets us apart.</p>
+        <div class="stats">
+          <div class="stat">
+            <h3>500</h3>
+            <p>Properties Sold</p>
+          </div>
+          <div class="stat">
+            <h3>1000</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat">
+            <h3>50</h3>
+            <p>Expert Agents</p>
+          </div>
+        </div>
+        
+        <div class="team-members">
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="John Doe">
+            <h3>John Doe</h3>
+            <p>CEO & Founder</p>
+            <div class="member-details" style="display: none;">
+              <p>20+ years of experience in luxury real estate</p>
+              <p>Certified Real Estate Broker</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80" alt="Jane Smith">
+            <h3>Jane Smith</h3>
+            <p>SEO & Head of Sales</p>
+            <div class="member-details" style="display: none;">
+              <p>15+ years of sales experience</p>
+              <p>Top performer for 5 consecutive years</p>
+              <p>Digital Marketing Expert</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-cards">
+          <div class="achievement-card">
+            <h4>Best Real Estate Agency</h4>
+            <p>2023 Real Estate Excellence Awards</p>
+          </div>
+          <div class="achievement-card">
+            <h4>Customer Satisfaction</h4>
+            <p>95% Client Satisfaction Rate</p>
+          </div>
+          <div class="achievement-card">
+            <h4>Market Leadership</h4>
+            <p>#1 in Luxury Properties</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Mr Builder</h3>
+        <p>Your trusted partner in real estate</p>
+        <div class="social-links">
+          <a href="https://facebook.com/mrbuilder"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/mrbuilder"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/mrbuilder"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>123 Real Estate Ave</p>
+        <p>New York, NY 10001</p>
+        <p>Phone: (555) 123-4567</p>
+        <p>Email: info@mrbuilder.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Mr Builder. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/properties.js"></script>
+  <script type="module" src="js/gallery.js"></script>
+  <script type="module" src="js/about.js"></script>
+</body>
+</html>
